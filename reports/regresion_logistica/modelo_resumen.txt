@@ -1,0 +1,66 @@
+=================================================
+  REGRESIÓN LOGÍSTICA - MODELO 1
+=================================================
+
+
+Call:
+glm(formula = Cancer ~ Age + Gender + Family_History + Smoking_History + 
+    Alcohol_Consumption + Obesity_BMI + Diet_Risk + Physical_Activity + 
+    Diabetes + Inflammatory_Bowel_Disease + Genetic_Mutation, 
+    family = binomial(link = "logit"), data = df)
+
+Coefficients:
+                                Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                   -0.9476441  0.0243777 -38.873  < 2e-16 ***
+Age                           -0.0004284  0.0003031  -1.413    0.158    
+GenderM                        0.4528607  0.0072435  62.520  < 2e-16 ***
+Family_HistoryYes              0.6265636  0.0086052  72.812  < 2e-16 ***
+Smoking_HistoryYes            -0.0396065  0.0075465  -5.248 1.53e-07 ***
+Alcohol_ConsumptionYes         0.1175414  0.0072922  16.119  < 2e-16 ***
+Obesity_BMIOverweight          0.1023478  0.0084689  12.085  < 2e-16 ***
+Obesity_BMIObese               0.4071550  0.0095164  42.785  < 2e-16 ***
+Diet_RiskModerate              0.6969322  0.0091329  76.310  < 2e-16 ***
+Diet_RiskHigh                  0.3541383  0.0098808  35.841  < 2e-16 ***
+Physical_ActivityModerate     -0.3401742  0.0087944 -38.681  < 2e-16 ***
+Physical_ActivityLow          -0.0989306  0.0095950 -10.311  < 2e-16 ***
+DiabetesYes                    0.1432750  0.0093131  15.384  < 2e-16 ***
+Inflammatory_Bowel_DiseaseYes  1.0008310  0.0154189  64.910  < 2e-16 ***
+Genetic_MutationYes            0.5105536  0.0115123  44.349  < 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 464400  on 334993  degrees of freedom
+Residual deviance: 436180  on 334979  degrees of freedom
+AIC: 436210
+
+Number of Fisher Scoring iterations: 4
+
+
+
+=== Test de razón de verosimilitudes ===
+Analysis of Deviance Table
+
+Model: binomial, link: logit
+
+Response: Cancer
+
+Terms added sequentially (first to last)
+
+
+                           Df Deviance Resid. Df Resid. Dev Pr(>Chi)    
+NULL                                      334993     464400             
+Age                         1      2.6    334992     464398  0.10372    
+Gender                      1   4244.6    334991     460153  < 2e-16 ***
+Family_History              1   6595.3    334990     453558  < 2e-16 ***
+Smoking_History             1      4.0    334989     453554  0.04564 *  
+Alcohol_Consumption         1    297.7    334988     453256  < 2e-16 ***
+Obesity_BMI                 2   2206.8    334986     451049  < 2e-16 ***
+Diet_Risk                   2   6243.3    334984     444806  < 2e-16 ***
+Physical_Activity           2   1718.7    334982     443087  < 2e-16 ***
+Diabetes                    1    242.3    334981     442845  < 2e-16 ***
+Inflammatory_Bowel_Disease  1   4654.3    334980     438191  < 2e-16 ***
+Genetic_Mutation            1   2010.7    334979     436180  < 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1

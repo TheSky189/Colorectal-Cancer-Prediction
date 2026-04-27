@@ -1,0 +1,99 @@
+# =============================================================
+# .gitignore para colon_cancer_ai
+# =============================================================
+
+# ----- Datos y modelos pesados (NUNCA subir a GitHub) -----
+data/
+models/*.pth
+models/*.joblib
+models/*.pkl
+models/ct_evaluacion/
+models/backups/
+*.npz
+*.npy
+*.h5
+*.tar
+*.zip
+*.nii
+*.nii.gz
+
+# Pero SI permitimos un README dentro de las carpetas de datos/modelos
+!data/README.md
+!models/README.md
+
+# ----- Python -----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+*.egg-info/
+build/
+dist/
+.ipynb_checkpoints/
+
+# ----- R -----
+.Rhistory
+.RData
+.Rproj.user/
+.Ruserdata
+
+# ----- IDEs -----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ----- Sistema operativo -----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----- Streamlit -----
+.streamlit/secrets.toml
+
+# ----- Logs y temporales -----
+*.log
+*.tmp
+*.bak
+.cache/
+
+# ----- Carpetas de archivado y backup local -----
+_archivados_*/
+backup_*.zip
+backup_*.tar.gz
+
+# ----- Carpetas exploratorias (no llegaron a produccion) -----
+src/python/research/
+
+# ----- Versiones antiguas reemplazadas por _v4 / _256 -----
+src/python/preprocesar_msd_colon_slices.py
+src/python/msd_colon_slice_dataset_cached.py
+src/python/17_comparar_ct_todas_versiones.py
+
+# ----- READMEs viejos consolidados en uno solo -----
+README_MEJORAS.md
+README_SCRIPTS_R.md
+README_v4.md
+
+# ----- Archivos de mantenimiento local -----
+limpiar_proyecto.ps1
+
+# ----- Resultados de evaluacion v5 (no necesarios en GitHub) -----
+reports/ct_v5_logs/
+reports/ct_v5_evaluation/
+
+
+.DS_Store
+
+# backups
+*.backup

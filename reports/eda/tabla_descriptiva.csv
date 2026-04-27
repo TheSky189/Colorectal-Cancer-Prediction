@@ -1,0 +1,3 @@
+﻿"Cancer","n","edad_media","edad_sd","edad_min","edad_max","pct_hombre","pct_family_hist","pct_fumador","pct_alcohol","pct_obeso","pct_diabetes","pct_eii","pct_mutacion"
+"Control",167497,69.3,11.9,30,89,48.9,18,39.9,47,23,17.2,3.9,8.7
+"Cáncer",167497,69.2,11.9,30,89,60.1,30,40.2,50.1,29.9,20,10,14.9
