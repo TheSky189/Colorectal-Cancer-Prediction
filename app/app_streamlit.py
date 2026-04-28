@@ -30,10 +30,16 @@ from utils.calculadora_riesgo_literatura import (
     calcular_riesgo_lifetime_aprox,
 )
 from utils.decision_combinada import calcular_decision_combinada
+from utils.model_downloader import ensure_models_present
+
 
 CLINICAL_MODEL_PATH = BASE_DIR / "models" / "calibrated_model.joblib"
 CT_MODEL_PATH = BASE_DIR / "models" / "msd_colon_unet_cached_best.pth"
 CSS_PATH = ASSETS_DIR / "styles.css"
+
+# Asegurar que los modelos están disponibles (descarga desde GitHub Releases
+# la primera vez que se ejecuta la app si no están localmente)
+ensure_models_present(BASE_DIR / "models", verbose=True)
 
 DEVICE = "cuda" if torch.cuda.is_available() else (
     "mps" if torch.backends.mps.is_available() else "cpu"
